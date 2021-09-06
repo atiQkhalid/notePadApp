@@ -20,6 +20,17 @@
             android:textStyle="bold"
             android:textSize="25sp"/>
 
+        <TextView
+            android:id="@+id/tv_emptyList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ooops_note_list_is_empty"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:visibility="gone"/>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_note"
             android:layout_below="@+id/tv_heading"

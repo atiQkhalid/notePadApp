@@ -46,6 +46,9 @@ class NoteFragment : Fragment(), InterfaceNoteAdapter {
         viewModel.allNotes.observe(requireActivity(), Observer { list ->
             list?.let {
                 adapter.updateNotes(it)
+                if (it.isEmpty()){
+                    binding.tvEmptyList.visibility = View.VISIBLE
+                }
             }
         })
 
