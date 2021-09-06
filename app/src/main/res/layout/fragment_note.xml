@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/note_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.NoteFragment"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/all_notes"
+            android:textStyle="bold"
+            android:textSize="25sp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_note"
+            android:layout_below="@+id/tv_heading"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            tools:listitem="@layout/list_item"
+            android:layout_marginBottom="50dp"/>
+
+        <LinearLayout
+            android:id="@+id/btOpenAddNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_add"
+                android:background="@color/primary"
+                android:padding="7dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/note_card_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:background="@drawable/border"
+    android:padding="16dp"
+    android:layout_marginTop="10dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Title Input"
+        android:textColor="@color/black"
+        android:textSize="20sp"/>
+
+
+
+    <TextView
+        android:id="@+id/tv_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        tools:text="hi how are you i am just testing length"
+        android:ems="3"
+        android:maxLength="30"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/text_margin_top"/>
+
+
+    <RelativeLayout
+        android:id="@+id/layout_dateTime"
+        android:layout_marginTop="@dimen/text_margin_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_note"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_dateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@tools:sample/date/ddmmyy"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            tools:ignore="SmallSp" />
+
+
+        <ImageView
+            android:id="@+id/bt_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_del"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <ImageView
+            android:id="@+id/bt_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_edit"
+            android:layout_toLeftOf="@+id/bt_delete"
+            android:layout_toStartOf="@+id/bt_delete" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
