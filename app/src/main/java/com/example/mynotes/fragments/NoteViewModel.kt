@@ -1,7 +1,9 @@
 package com.example.mynotes.fragments
 
 import android.app.Application
-import androidx.lifecycle.*
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.viewModelScope
 import com.example.mynotes.database.NoteDatabase
 import com.example.mynotes.database.entity.Note
 import com.example.mynotes.repositories.NoteRepository
@@ -23,11 +25,11 @@ class NoteViewModel(application: Application) : AndroidViewModel(application) {
         repository.delete(note)
     }
 
-    fun insertNote(note: Note) = viewModelScope.launch(Dispatchers.IO){
+    fun insertNote(note: Note) = viewModelScope.launch(Dispatchers.IO) {
         repository.insert(note)
     }
 
-    fun updateNote(note: Note) = viewModelScope.launch( Dispatchers.IO){
+    fun updateNote(note: Note) = viewModelScope.launch(Dispatchers.IO) {
         repository.update(note)
     }
 }

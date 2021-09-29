@@ -2,12 +2,12 @@ package com.example.mynotes.fragments
 
 import android.os.Build
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.mynotes.database.entity.Note
 import com.example.mynotes.databinding.FragmentAddNoteBinding
@@ -46,6 +46,7 @@ class AddNoteFragment : Fragment() {
             }
         }
     }
+
     private fun reset() {
         binding.etNote.setText("")
         binding.etTitle.setText("")
