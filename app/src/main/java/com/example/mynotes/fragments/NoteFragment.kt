@@ -58,7 +58,7 @@ class NoteFragment : Fragment(), InterfaceNoteAdapter {
     }
 
     override fun editListener(note: Note) {
-        Toast.makeText(requireContext(), "${note.title} is been pressed", Toast.LENGTH_SHORT).show()
+        Toast.makeText(requireContext(), "You open ${note.title}", Toast.LENGTH_SHORT).show()
         replaceFragment(EditNoteFragment(note))
     }
 
