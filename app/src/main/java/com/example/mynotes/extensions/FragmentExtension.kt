@@ -1,4 +1,5 @@
 package com.example.mynotes.extensions
+
 import android.os.Bundle
 import androidx.annotation.AnimRes
 import androidx.annotation.IdRes

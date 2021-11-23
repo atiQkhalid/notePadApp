@@ -51,7 +51,6 @@ class NoteAdapter(private val context: Context, private val click: InterfaceNote
     fun updateNotes(newList: List<Note>) {
         allNotes.clear()
         allNotes.addAll(newList)
-
         notifyDataSetChanged()
     }
 }
