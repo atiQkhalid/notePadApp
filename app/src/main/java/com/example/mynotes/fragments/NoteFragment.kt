@@ -23,7 +23,7 @@ class NoteFragment : Fragment(), InterfaceNoteAdapter {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         binding = FragmentNoteBinding.inflate(inflater, container, false)
         return binding.root
@@ -58,7 +58,7 @@ class NoteFragment : Fragment(), InterfaceNoteAdapter {
     }
 
     override fun editListener(note: Note) {
-        Toast.makeText(requireContext(), "You open ${note.title}", Toast.LENGTH_SHORT).show()
+        Toast.makeText(requireContext(), "${note.title}", Toast.LENGTH_SHORT).show()
         replaceFragment(EditNoteFragment(note))
     }
 

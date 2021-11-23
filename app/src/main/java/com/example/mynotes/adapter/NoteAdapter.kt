@@ -3,7 +3,6 @@ package com.example.mynotes.adapter
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.RelativeLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mynotes.database.entity.Note
 import com.example.mynotes.databinding.ListItemBinding
@@ -17,7 +16,6 @@ class NoteAdapter(private val context: Context, private val click: InterfaceNote
         val title = binding.tvTitle
         val noteText = binding.tvNote
         val dateTime = binding.tvDateTime
-        val layout = binding.noteCardLayout as RelativeLayout
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
@@ -31,7 +29,7 @@ class NoteAdapter(private val context: Context, private val click: InterfaceNote
         binding.btEdit.setOnClickListener {
             click.editListener(allNotes[vh.adapterPosition])
         }
-        binding.layoutDateTime.setOnClickListener {
+        binding.noteCardLayout.setOnClickListener {
             click.editListener(allNotes[vh.adapterPosition])
         }
         return vh
